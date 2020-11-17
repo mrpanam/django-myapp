@@ -5,7 +5,7 @@ from django.contrib.auth.models import  User
 
 class UserRegisterForm(UserCreationForm):
     email = forms.EmailField()
-    is_staff = forms.BooleanField()
+    is_staff = forms.BooleanField(required=False)
 
     class Meta:
         model = User
